@@ -36,8 +36,8 @@
 	$senha_bd = "beatlesstrawberry";
 	$bd = "bsts_mart";
 
-	$conexao = mysqli_connect($local,$usuario,$senha_bd,$bd) 
+	$db = mysqli_connect($local,$usuario,$senha_bd,$bd) 
 					or die("ERRO");
-	mysqli_set_charset($conexao,"utf8");
+	mysqli_set_charset($$db,"utf8");
 
 ?>
