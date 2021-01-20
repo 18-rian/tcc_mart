@@ -183,7 +183,7 @@
 
             function excluir(id_excludente)
             {
-                alert(id_evento);
+                //alert(id_evento);
                 $(document).ready(function ()
                 {
                     var resultado = confirm("Deseja mesmo exluir este evento?");
