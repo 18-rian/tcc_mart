@@ -36,7 +36,7 @@
                 grupos_itinerantes
             ";
 
-            $query = mysqli_query($conexao, $SELECT);
+            $query = mysqli_query($db, $SELECT);
 
 
             if(mysqli_num_rows($query) > 0) //Se verdadeiro
@@ -54,6 +54,7 @@
             }
       
       //'".$registros['cnpj_itine']."', '".."'
+      mysqli_close($db);
     ?>
       
       

@@ -11,7 +11,7 @@
              WHERE
                 nome = '$pala';";//PESQUISAR AS PALAVRAS QUE COMEÇAM COM A LETRA DA VARIAVEL "$PALA"  
 
-    $query_two = mysqli_query($conexao, $SQL_two);     
+    $query_two = mysqli_query($db, $SQL_two);     
     
 
     if(mysqli_num_rows($query_two) > 0) //Se verdadeiro
@@ -38,7 +38,7 @@
                  WHERE
                     nome like '$pala%';";//PESQUISAR AS PALAVRAS QUE COMEÇAM COM A LETRA DA VARIAVEL "$PALA"  
 
-        $query = mysqli_query($conexao, $SQL);     
+        $query = mysqli_query($db, $SQL);     
         
         
 
@@ -64,5 +64,5 @@
     
     
     
-    mysqli_close($conexao);
+    mysqli_close($db);
 ?>

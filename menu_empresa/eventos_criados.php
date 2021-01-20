@@ -41,7 +41,7 @@
                     WHERE
                         cnpj_empresa = '. $_SESSION["cnpj"].'';
 
-            $query = mysqli_query($conexao, $SQL);
+            $query = mysqli_query($db, $SQL);
 
             if(mysqli_num_rows($query) > 0) //Se verdadeiro
             {
@@ -75,7 +75,7 @@
                 print '<a class = "display-4">Nenhum evento registrado</a>';
             }
 
-            mysqli_close($conexao);
+            mysqli_close($db);
         
         
         ?>

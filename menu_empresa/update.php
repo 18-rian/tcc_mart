@@ -12,36 +12,36 @@
     {
         $SQL = "UPDATE eventos SET nome = '".$valor."' WHERE id_evento = $ID_EVENTO;";
         
-        $QUERY = mysqli_query($conexao, $SQL);
+        $QUERY = mysqli_query($db, $SQL);
     }
     if($a == 2)
     {
         $SQL = "UPDATE eventos SET descricao = '".$valor."' WHERE id_evento = $ID_EVENTO;";
         
-        $QUERY = mysqli_query($conexao, $SQL);
+        $QUERY = mysqli_query($db, $SQL);
     }
     if($a == 3)
     {
         $SQL = "UPDATE eventos SET local = '".$valor."' WHERE id_evento = $ID_EVENTO;";
         
-        $QUERY = mysqli_query($conexao, $SQL);
+        $QUERY = mysqli_query($db, $SQL);
         
     }
     if($a == 4)
     {
         $SQL = "UPDATE eventos SET data_horario = '".$valor."' WHERE id_evento = $ID_EVENTO;";
         
-        $QUERY = mysqli_query($conexao, $SQL);
+        $QUERY = mysqli_query($db, $SQL);
         
     }
     if($a == 5)
     {
         $SQL = "UPDATE eventos SET url = '".$valor."' WHERE id_evento = $ID_EVENTO;";
         
-        $QUERY = mysqli_query($conexao, $SQL);
+        $QUERY = mysqli_query($db, $SQL);
         
         print $SQL;
     }
 
-    mysqli_close($conexao);
+    mysqli_close($db);
 ?>

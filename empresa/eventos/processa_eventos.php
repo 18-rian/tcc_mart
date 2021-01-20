@@ -67,7 +67,7 @@
                     VALUES
                         ('".$_POST['nome']."', '".$_POST['descricao']."',  '".$_POST['cidade']."', '".$_POST['endereco']."', '".$_POST['data_hora']."', ".$_POST['cnpj'].", '".$_POST['url']."', '".$newName."', '".$newName_two."');
                     ";
-            $query = mysqli_query($conexao, $SQL);
+            $query = mysqli_query($db, $SQL);
 
 
             if($query == NULL)
@@ -79,7 +79,7 @@
             }
             else
             {
-                $last_id = mysqli_insert_id($conexao);
+                $last_id = mysqli_insert_id($db);
 
 
                 $_SESSION["id_evento"] = $last_id;
@@ -90,7 +90,7 @@
 
             }
 
-            mysqli_close($conexao); 
+            mysqli_close($db); 
         ?>
 
         

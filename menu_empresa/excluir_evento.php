@@ -10,11 +10,11 @@
 
     $SQL = 'DELETE FROM eventos WHERE id_evento = '.$id.' AND cnpj_empresa = '.$cnpj.';';
 
-    $query = mysqli_query($conexao, $SQL);
+    $query = mysqli_query($db, $SQL);
 
 
 
-    mysqli_close($conexao);
+    mysqli_close($db);
 
 
 ?>

@@ -146,7 +146,7 @@
 					    WHERE
 				            id_evento = '.$id_c.';';
                 
-			    $query = mysqli_query($conexao, $SQL);
+			    $query = mysqli_query($db, $SQL);
 
 			    if(mysqli_num_rows($query) > 0) //Se verdadeiro
 			    {
@@ -162,7 +162,7 @@
                         
                         $SQL_TWO = 'SELECT * FROM publico WHERE evento_id = '.$id_c.';';
                         
-                        $query_two = mysqli_query($conexao, $SQL_TWO);
+                        $query_two = mysqli_query($db, $SQL_TWO);
                         
                         $publico = mysqli_num_rows($query_two);
                         
@@ -192,7 +192,7 @@
                 
                 $SQL_two = 'SELECT * FROM publico WHERE cliente_id = '.$true.' AND evento_id = '.$repree.';';
                     
-                $query_twoo = mysqli_query($conexao, $SQL_two);
+                $query_twoo = mysqli_query($db, $SQL_two);
                 print '<div class = "jumbotron" style = "display: inline-block; border-top: 8px solid black; margin-left: 60%; margin-top: -250px; height: 90%; vertical-align: text-top;>';
                 if(mysqli_num_rows($query_twoo) > 0) //Se verdadeiro
 			    {
@@ -237,7 +237,7 @@
                             
                             ';    
                 }
-                mysqli_close($conexao);
+                mysqli_close($db);
             ?>
             </div>
         </div>

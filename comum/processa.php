@@ -65,8 +65,7 @@
 						(nome, sobrenome, email, senha, data_de_nasc, cidade, editais_s_n, foto_perfil, foto_capa)
 					VALUES ('$nome', '$sobre', '$mail', '$senha', '$data', '$city', '$edital', '$newName', '$newName_two')";
 	
-	$query = mysqli_query($conexao, $inserindo);
-
+	$query = mysqli_query($db, $inserindo);
 
 	$_SESSION["nome"] = $nome;
 	$_SESSION["sobrenome"] = $sobre;
@@ -78,11 +77,11 @@
 	$_SESSION["perfil"] = $newName;
 	$_SESSION["capa"] = $newName_two;
 
-    $last_id = mysqli_insert_id($conexao);
+    $last_id = mysqli_insert_id($db);
     $_SESSION["id"] = $last_id;
 	
 
-	mysqli_close($conexao);
+	mysqli_close($db);
 
 	header("location:../menu/menu.php");
 	

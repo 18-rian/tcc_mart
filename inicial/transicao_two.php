@@ -21,7 +21,7 @@
     {
         $SQL_two = 'SELECT * FROM publico WHERE cliente_id = '.$true.' AND evento_id = '.$repree.';';
         
-        $query_twoo = mysqli_query($conexao, $SQL_two);
+        $query_twoo = mysqli_query($db, $SQL_two);
         
         if(mysqli_num_rows($query_twoo) > 0) //Se verdadeiro
         {

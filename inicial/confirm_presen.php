@@ -13,9 +13,9 @@
 
     
 
-    $query = mysqli_query($conexao, $inserindo);
+    $query = mysqli_query($db, $inserindo);
 
 
-    mysqli_close($conexao);
+    mysqli_close($db);
 
 ?>

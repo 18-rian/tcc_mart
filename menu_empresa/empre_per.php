@@ -43,7 +43,7 @@
 
            
 
-            $query_table = mysqli_query($conexao, $SQL);
+            $query_table = mysqli_query($db, $SQL);
 
             if(mysqli_num_rows($query_table) > 0) //Se verdadeiro
             {
@@ -72,7 +72,7 @@
                 print "<h1>Sem evento</h1>";
 
             }
-            mysqli_close($conexao);
+            mysqli_close($db);
             
 
         ?>

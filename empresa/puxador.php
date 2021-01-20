@@ -36,7 +36,7 @@
                         WHERE 
                             id_evento = $id_evento";
 
-            $query = mysqli_query($conexao, $SELECT);
+            $query = mysqli_query($db, $SELECT);
 
             if(mysqli_num_rows($query) > 0) //Se verdadeiro
             {
@@ -72,7 +72,7 @@
                 print "erro!";
 
             }
-
+            mysqli_close($db);
 
         ?>
 

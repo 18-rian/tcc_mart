@@ -12,7 +12,7 @@
                     ON 
 	           publico.cliente_id = $id AND eventos.id_evento = publico.evento_id;";
 
-    $query_list = mysqli_query($conexao, $SQL_list);
+    $query_list = mysqli_query($db, $SQL_list);
     if(mysqli_num_rows($query_list) > 0) //Se verdadeiro
     {
         print '<div class="form-group"><table class = "table table-hover">';
@@ -36,6 +36,6 @@
         
     }
 
-    mysqli_close($conexao);
+    mysqli_close($db);
 
 ?>

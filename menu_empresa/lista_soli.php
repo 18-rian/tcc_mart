@@ -75,7 +75,7 @@
                     WHERE 
                         grupos_itinerantes_contratado = '.$cnpj.' AND situacao = 1; ';
 
-            $query = mysqli_query($conexao, $sql);
+            $query = mysqli_query($db, $sql);
 
 
 
@@ -108,7 +108,7 @@
                                     eventos.id_evento = '.$registros["eventos_id_evento"].'
                                     AND empresa.cnpj = '.$registros["eventos_cnpj_empresa"].'';
 
-                    $query_two = mysqli_query($conexao, $sql_two);
+                    $query_two = mysqli_query($db, $sql_two);
 
                     //fazer a pegada dos dados!
 

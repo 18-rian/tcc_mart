@@ -33,7 +33,7 @@
                     WHERE
                         id_evento = '.$id_c.';';
 
-            $query = mysqli_query($conexao, $SQL);
+            $query = mysqli_query($db, $SQL);
 
             while($registros = mysqli_fetch_assoc($query))
             {
@@ -48,7 +48,7 @@
                         </div>
                     </div>';
             
-            mysqli_close($conexao);
+            mysqli_close($db);
 
            
         ?>

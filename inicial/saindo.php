@@ -8,10 +8,10 @@
 	$deletando = "DELETE FROM publico
 						WHERE cliente_id = $a AND evento_id = $b";
 
-    $query = mysqli_query($conexao, $deletando);
+    $query = mysqli_query($db, $deletando);
 
 
-    mysqli_close($conexao);
+    mysqli_close($db);
 
 
 ?>

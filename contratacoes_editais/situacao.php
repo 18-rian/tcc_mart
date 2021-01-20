@@ -15,7 +15,7 @@
             WHERE
                 eventos_id_evento = '.$id_evento.' AND eventos_cnpj_empresa = '.$id_empre.'';
 
-    $query = mysqli_query($conexao, $sql);
+    $query = mysqli_query($db, $sql);
 
     if(mysqli_num_rows($query) > 0) //Se verdadeiro
     {
@@ -40,7 +40,7 @@
                             WHERE
                                 cnpj = ".$cnpj_itine."";
                 
-                $query_two = mysqli_query($conexao, $sql_two);
+                $query_two = mysqli_query($db, $sql_two);
                 
                 if(mysqli_num_rows($query_two) > 0) //Se verdadeiro
                 {
@@ -70,7 +70,7 @@
         print "Não há uma conversa em andamento";
     }
 
-    mysqli_close($conexao);
+    mysqli_close($db);
     
 
 

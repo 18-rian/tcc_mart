@@ -62,7 +62,7 @@
 						(cnpj, nome_empresa, email, senha, localizacao, cidade, tipos_eventos, foto_empresa, capa_empresa)
                     VALUES ($cnpj, '$nome' , '$email', '$senha', '$localizacao', '$cidade', '$tipos', '$newName', '$newName_two')";
 
-    $query = mysqli_query($conexao, $inserindo);
+    $query = mysqli_query($db, $inserindo);
     print $inserindo;
     if($localizacao == "Itinerante")
     {
@@ -71,7 +71,7 @@
 						(cnpj_itine, nome)
                     VALUES($cnpj, '$nome')";
                     
-        $query_two = mysqli_query($conexao, $iti);
+        $query_two = mysqli_query($db, $iti);
 	}
 
     $_SESSION["cnpj"] = $cnpj;
@@ -86,5 +86,5 @@
 
 	header("location:../menu_empresa/menu.php");
     
-    mysqli_close($conexao);
+    mysqli_close($db);
 ?>

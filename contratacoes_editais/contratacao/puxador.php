@@ -12,7 +12,7 @@
                 cnpj_itine = $cnpj;
             ";
             
-    $query = mysqli_query($conexao, $SELECT);
+    $query = mysqli_query($db, $SELECT);
     
     while($registros = mysqli_fetch_assoc($query))
     {
@@ -23,6 +23,7 @@
     $_SESSION["cnpj_temp"] = $cnpj;
     $_SESSION["nome"] = $nome;
 
+    mysqli_close($db);
 
     header("Location: negoc.php");
 ?>

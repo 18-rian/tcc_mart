@@ -6,7 +6,7 @@
                 FROM
                     editais;";
 
-    $query_edi = mysqli_query($conexao, $SQL_EDI);
+    $query_edi = mysqli_query($db, $SQL_EDI);
 
     if(mysqli_num_rows($query_edi) > 0) //Se verdadeiro
     {

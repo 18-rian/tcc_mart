@@ -20,14 +20,14 @@
                             (nome_edital, data_de_publicacao, publico_alvo, arquivo, empresa_cnpj, descricao_edital)
                         VALUES ("'.$_POST["name_edital"].'", "'.$_POST["data_edital"].'", "'.$_POST["alvo"].'", "'.$_POST["arquivo"].'",'.$_SESSION["cnpj"].', "'.$_POST["descricao"].'")';
 
-        $query = mysqli_query($conexao, $SQL);
+        $query = mysqli_query($db, $SQL);
 
 
 
         print "<h1>Edital publicado</h1>";
         print '<br /><a href = "armazenamento_editais.php">Voltar</a>';
 
-
+        mysqli_close($db);
       ?>
 
      

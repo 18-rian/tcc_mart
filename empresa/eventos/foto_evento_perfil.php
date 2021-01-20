@@ -35,7 +35,7 @@
                     WHERE
                         id_evento = '.$id_c.';';
 
-            $query = mysqli_query($conexao, $SQL);
+            $query = mysqli_query($db, $SQL);
 
             while($registros = mysqli_fetch_assoc($query))
             {
@@ -55,7 +55,7 @@
 
             print '<hr style = "border: 8px solid black; background-color: black;"/> </div></div>';
            //<br /><br /><br /><br />
-            mysqli_close($conexao);
+            mysqli_close($db);
 
         ?>
 

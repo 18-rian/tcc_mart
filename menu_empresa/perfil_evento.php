@@ -242,7 +242,7 @@
                         WHERE
                             id_evento = '.$_SESSION["id_evento"].';';
 
-                $query = mysqli_query($conexao, $SQL);
+                $query = mysqli_query($db, $SQL);
                 //print $SQL;
 
                 print '<style rel="stylesheet" type="text/css">

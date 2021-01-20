@@ -12,10 +12,12 @@
             VALUES
                 ('.$id_evento.', '.$cnpj.', '.$cnpj_temp.', 1, "'.$des.'")';
 
-    $exe = mysqli_query($conexao, $sql);
+    $exe = mysqli_query($db, $sql);
 
     print "<script>alert('Solicitação de contrato enviada!')</script>";
 
+
+    mysqli_close($db);
     header("Location: ../menu_negociacao.php");
 
 ?>

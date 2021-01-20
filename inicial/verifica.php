@@ -10,7 +10,7 @@
             WHERE
                 email = '".$_POST['mail']."' AND senha = '".$_POST['senha']."'";
 
-    $query = mysqli_query($conexao, $SQL);
+    $query = mysqli_query($db, $SQL);
 
     if(mysqli_num_rows($query) > 0) //Se verdadeiro
     {
@@ -38,7 +38,7 @@
                         empresa
                     WHERE
                         email = '".$_POST['mail']."' AND senha = '".$_POST['senha']."'";
-        $query_two = mysqli_query($conexao, $SQL_two);
+        $query_two = mysqli_query($db, $SQL_two);
 
         if(mysqli_num_rows($query_two) > 0) //Se verdadeiro
         {
@@ -66,5 +66,5 @@
     }
 
 
-    mysqli_close($conexao);
+    mysqli_close($db);
 ?>

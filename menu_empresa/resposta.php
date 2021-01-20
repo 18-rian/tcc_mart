@@ -9,17 +9,17 @@
     {
         $sql = 'UPDATE contratacao SET situacao = 2 WHERE id_contrato = '.$repre.'';
         
-        $query = mysqli_query($conexao, $sql);
+        $query = mysqli_query($db, $sql);
         
     }
     else if($_POST["y"] == 2)
     {
         $sql = 'UPDATE contratacao SET situacao = 3 WHERE id_contrato = '.$repre.'';
         
-        $query = mysqli_query($conexao, $sql);
+        $query = mysqli_query($db, $sql);
     }
 
     //Precisa fazer os eventos de recusa e aceitação de oferta.
 
-    mysqli_close($conexao);
+    mysqli_close($db);
 ?>

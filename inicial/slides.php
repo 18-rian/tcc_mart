@@ -7,7 +7,7 @@
 			FROM
 				eventos";
 
-	$query = mysqli_query($conexao, $SQL);
+	$query = mysqli_query($db, $SQL);
 	if(mysqli_num_rows($query) > 0) //Se verdadeiro
 	{
         $count = 0;
