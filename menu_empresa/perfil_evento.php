@@ -183,6 +183,7 @@
 
             function excluir(id_excludente)
             {
+                alert(id_evento);
                 $(document).ready(function ()
                 {
                     var resultado = confirm("Deseja mesmo exluir este evento?");
@@ -198,7 +199,7 @@
                                 success: function(get_back)
                                 {
                                     $("body").html(get_back);
-                                    window.location.href = "../menu_empresa/menu.php";
+                                    //window.location.href = "../menu_empresa/menu.php";
                                 }
                             });
                     }

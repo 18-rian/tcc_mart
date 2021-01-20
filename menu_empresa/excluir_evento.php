@@ -12,8 +12,6 @@
 
     $query = mysqli_query($db, $SQL);
 
-
-
     mysqli_close($db);
 
 
